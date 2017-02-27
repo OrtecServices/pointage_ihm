@@ -1,6 +1,6 @@
 @import "variables";
-@import "../valo/valo";
+@import "../valo-ortec/valortec";
 
 .valo-blueprint {
-  @include valo;
+  @include valortec;
 }

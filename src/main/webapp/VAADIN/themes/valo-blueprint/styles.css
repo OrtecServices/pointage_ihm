@@ -1523,710 +1523,6 @@ div.v-layout.v-horizontal.v-widget {
 	vertical-align: top;
 }
 
-/**
- * Checks if a list contains a certain value.
- * 
- * @param {list} $list - the list to check
- * @param {value} $var - the value to search for
- * @param {bool} $recursive (false) - should any contained lists be checked for the value
- * 
- * @return {bool} true if the value is found from the list, false otherwise
- * 
- * @group lists
- */
-
-/**
- * Cross-browser opacity.
- *
- * @param {number} $value - opacity value from 0 to 1
- * @param {bool} $important (false) - should the property value be declared with !important
- *
- * @group util
- */
-
-/**
- * Outputs cross-browser Valo-specific linear gradient background-image declarations.
- * 
- * @group style
- * 
- * @param {color} $color ($v-background-color) - The base color for the gradient color stops
- * @param {list} $gradient ($v-gradient) - Valo-specific gradient value. See the documentation for $v-gradient.
- * @param {color} $fallback (null) - A fallback color for browser which do not support linear gradients (IE8 and IE9 in particular). If null, the base $color is used instead.
- * @param {string} $direction (to bottom) - the direction of the linear gradient. The color stops are by default so that a lighter shade is at the start and a darker shade is at the end.
- */
-
-/**
- * Computes a CSS border property value for the given base color.
- *
- * @group style
- *
- * @param {list} $border ($v-border) - CSS border value which can contain any of the color keywords
- * @param {color} $color ($v-background-color) - the base color to which the color keywords are applied to
- * @param {color} $context (null) - context/surrounding color where the border is expected to appear. The color of the final border is the darker of the two parameters passed to this function.
- * @param {number} $strength (1) - adjustment for the border contrast
- *
- * @return {list} The input $border value with any color keyword replaced with the corresponding actual color
- */
-
-/**
- * Ouput selectors and properties to vertically center elements inside their parent.
- * 
- * @param {string} $to-align (()) - The selector to match the elements which you wish to align vertically. The targeted elements should be inline or inline-block elements.
- * @param {string} $align (middle) - The vertical-align value, e.g. top, middle, bottom
- * @param {string} $pseudo-element (after) - Which pseudo element to use for the vertical align guide
- * 
- * @group util
- */
-
-@font-face {
-	font-family: ThemeIcons;
-	font-weight: normal;
-	font-style: normal;
-	src: url(../valo/util/bourbon/css3/../../../../base/fonts/themeicons-webfont.eot);
-	src: url(../valo/util/bourbon/css3/../../../../base/fonts/themeicons-webfont.eot?#iefix) format("embedded-opentype"), url(../valo/util/bourbon/css3/../../../../base/fonts/themeicons-webfont.woff) format("woff"), url(../valo/util/bourbon/css3/../../../../base/fonts/themeicons-webfont.ttf) format("truetype"), url(../valo/util/bourbon/css3/../../../../base/fonts/themeicons-webfont.svg#ThemeIcons) format("svg");
-}
-
-.ThemeIcons {
-	font-family: ThemeIcons;
-	font-style: normal;
-	font-weight: normal;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	display: inline-block;
-	text-align: center;
-}
-
-@font-face {
-	font-family: FontAwesome;
-	font-weight: normal;
-	font-style: normal;
-	src: url(../valo/util/bourbon/css3/../../../../base/fonts/fontawesome-webfont.eot);
-	src: url(../valo/util/bourbon/css3/../../../../base/fonts/fontawesome-webfont.eot?#iefix) format("embedded-opentype"), url(../valo/util/bourbon/css3/../../../../base/fonts/fontawesome-webfont.woff) format("woff"), url(../valo/util/bourbon/css3/../../../../base/fonts/fontawesome-webfont.ttf) format("truetype"), url(../valo/util/bourbon/css3/../../../../base/fonts/fontawesome-webfont.svg#FontAwesome) format("svg");
-}
-
-.FontAwesome {
-	font-family: FontAwesome;
-	font-style: normal;
-	font-weight: normal;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	display: inline-block;
-	text-align: center;
-}
-
-@-webkit-keyframes v-rotate-360 {
-		to {
-		-webkit-transform: rotate(360deg);
-	}
-	}
-
-@-moz-keyframes v-rotate-360 {
-		to {
-		-moz-transform: rotate(360deg);
-	}
-	}
-
-@-o-keyframes v-rotate-360 {
-		to {
-		-o-transform: rotate(360deg);
-	}
-	}
-
-@keyframes v-rotate-360 {
-		to {
-		transform: rotate(360deg);
-	}
-	}
-
-@-webkit-keyframes v-progress-start {
-		0% {
-		width: 0%;
-	}
-		100% {
-		width: 50%;
-	}
-	}
-
-@-moz-keyframes v-progress-start {
-		0% {
-		width: 0%;
-	}
-		100% {
-		width: 50%;
-	}
-	}
-
-@keyframes v-progress-start {
-		0% {
-		width: 0%;
-	}
-		100% {
-		width: 50%;
-	}
-	}
-
-@-webkit-keyframes v-progress-delay {
-		0% {
-		width: 50%;
-	}
-		100% {
-		width: 90%;
-	}
-	}
-
-@-moz-keyframes v-progress-delay {
-		0% {
-		width: 50%;
-	}
-		100% {
-		width: 90%;
-	}
-	}
-
-@keyframes v-progress-delay {
-		0% {
-		width: 50%;
-	}
-		100% {
-		width: 90%;
-	}
-	}
-
-@-webkit-keyframes v-progress-wait {
-		0% {
-		width: 90%;
-		height: 5px;
-	}
-		3% {
-		width: 91%;
-		height: 7px;
-	}
-		100% {
-		width: 96%;
-		height: 7px;
-	}
-	}
-
-@-moz-keyframes v-progress-wait {
-		0% {
-		width: 90%;
-		height: 5px;
-	}
-		3% {
-		width: 91%;
-		height: 7px;
-	}
-		100% {
-		width: 96%;
-		height: 7px;
-	}
-	}
-
-@keyframes v-progress-wait {
-		0% {
-		width: 90%;
-		height: 5px;
-	}
-		3% {
-		width: 91%;
-		height: 7px;
-	}
-		100% {
-		width: 96%;
-		height: 7px;
-	}
-	}
-
-@-webkit-keyframes v-progress-wait-pulse {
-		0% {
-		opacity: 1;
-	}
-		50% {
-		opacity: 0.1;
-	}
-		100% {
-		opacity: 1;
-	}
-	}
-
-@-moz-keyframes v-progress-wait-pulse {
-		0% {
-		opacity: 1;
-	}
-		50% {
-		opacity: 0.1;
-	}
-		100% {
-		opacity: 1;
-	}
-	}
-
-@keyframes v-progress-wait-pulse {
-		0% {
-		opacity: 1;
-	}
-		50% {
-		opacity: 0.1;
-	}
-		100% {
-		opacity: 1;
-	}
-	}
-
-/**
- * Outputs the context menu selectors and styles, which is used by Table and Tree for instance.
- * 
- * @requires {mixin} valo-selection-item-style
- * @requires {mixin} valo-selection-item-selected-style
- */
-
-/**
- * The background color for overlay elements.
- *
- * @type color
- * @group overlay
- */
-
-.v-shadow, .v-shadow-window {
-	display: none;
-}
-
-.v-ie8 .v-shadow, .v-ie8 .v-shadow-window {
-	display: block;
-}
-
-.v-ie8 .v-shadow .top-left, .v-ie8 .v-shadow-window .top-left {
-	position: absolute;
-	top: -1px;
-	right: -1px;
-	bottom: -1px;
-	left: -1px;
-	background: white;
-	filter: alpha(opacity=50) progid:DXImageTransform.Microsoft.blur(pixelradius=0, makeShadow=false);
-}
-
-/**
- * The backgound color for tooltips.
- *
- * @type color
- * @group tooltip
- */
-
-/**
- *
- *
- * @param {string} $primary-stylename (v-absolutelayout) - 
- *
- * @group absolutelayout
- */
-
-/**
- * Outputs the selectors and properties for the Accordion component.
- *
- * @param {string} $primary-stylename (v-accordion) - the primary style name for the selectors
- * @param {bool} $include-additional-styles - should the mixin output all the different style variations of the component
- * @group accordion
- */
-
-/**
- * Outputs the selectors and properties for the Button component.
- *
- * @param {string} $primary-stylename (v-button) - the primary style name for the selectors
- * @param {bool} $include-additional-styles - should the mixin output all the different style variations of the component
- *
- * @group button
- */
-
-/**
- * A list of colors for custom event colors. Can be an empty list of you don't 
- * need any custom event colors.
- * 
- * @example javascript
- * // Java code
- * // 'event' is an instance of EditableCalendarEvent
- * event.setStyleName("color1"); // 1st color in the list
- * event.setStyleName("color2"); // 2nd color in the list
- * // etc.
- * 
- * @group calendar
- */
-
-/**
- * Outputs the selectors and properties for the CheckBox component.
- *
- * @param {string} $primary-stylename (v-checkbox) - the primary style name for the selectors
- * @param {bool} $include-additional-styles - should the mixin output all the different style variations of the component
- *
- * @group checkbox
- */
-
-/**
- * Outputs the global selectors and properties for the ColorPicker component - styles which are 
- * considered mandatory for the component to work properly.
- *
- * @param {string} $primary-stylename (v-colorpicker) - the primary style name for the selectors
- *
- * @group colorpicker
- */
-
-/**
- * Outputs the selectors and properties for the ComboBox component.
- *
- * @param {string} $primary-stylename (v-filterselect) - the primary style name for the selectors
- * @param {bool} $include-additional-styles - should the mixin output all the different style variations of the component
- *
- * @group combobox
- */
-
-/**
- * The amount of spacing between different widgets in a component group.
- * If null, a computed value is used ($v-border size * -1, or 1px if $v-border size is 0)
- * 
- * @group csslayout
- */
-
-/**
- *
- *
- * @param {string} $primary-stylename (v-customcomponent) - 
- *
- * @group customcomponent
- */
-
-/**
- *
- *
- * @param {string} $primary-stylename (v-customlayout) - 
- *
- * @group customlayout
- */
-
-/**
- * Outputs the selectors and properties for the DateField component.
- *
- * @param {string} $primary-stylename (v-datefield) - the primary style name for the selectors
- * @param {bool} $include-additional-styles - should the mixin output all the different style variations of the component
- *
- * @group datefield
- */
-
-/**
- * Outputs the styles and selectors for the DragAndDropWrapper component.
- * 
- * @param {string} $primary-stylename (v-ddwrapper) - the primary style name for the selectors
- * 
- * @group drag-n-drop
- */
-
-/**
- *
- *
- * @param {string} $primary-stylename (v-form) - 
- *
- * @group form
- */
-
-/**
- * Outputs the selectors and properties for the FormLayout component.
- *
- * @param {string} $primary-stylename (v-formlayout) - the primary style name for the selectors
- * @param {bool} $include-additional-styles - should the mixin output all the different style variations of the component
- *
- * @group formlayout
- */
-
-/**
- *
- * @group table
- */
-
-@-webkit-keyframes valo-grid-editor-footer-animate-in {
-		0% {
-		margin-top: -41px;
-	}
-	}
-
-@-moz-keyframes valo-grid-editor-footer-animate-in {
-		0% {
-		margin-top: -41px;
-	}
-	}
-
-@keyframes valo-grid-editor-footer-animate-in {
-		0% {
-		margin-top: -41px;
-	}
-	}
-
-@-webkit-keyframes valo-grid-editor-footer-animate-in-alt {
-		0% {
-		margin-bottom: -42px;
-	}
-		100% {
-		margin-bottom: -1px;
-	}
-	}
-
-@-moz-keyframes valo-grid-editor-footer-animate-in-alt {
-		0% {
-		margin-bottom: -42px;
-	}
-		100% {
-		margin-bottom: -1px;
-	}
-	}
-
-@keyframes valo-grid-editor-footer-animate-in-alt {
-		0% {
-		margin-bottom: -42px;
-	}
-		100% {
-		margin-bottom: -1px;
-	}
-	}
-
-/**
- *
- *
- * @param {string} $primary-stylename (v-gridlayout) - 
- *
- * @group gridlayout
- */
-
-/**
- * The font weight for headers.
- * 
- * @group label
- */
-
-/**
- *
- * @group link
- */
-
-/**
- *
- *
- * @param {string} $primary-stylename (v-loginform) - 
- *
- * @group loginform
- */
-
-/**
- *
- *
- * @param {string} $primary-stylename (v-menubar) - 
- * @param {bool} $include-additional-styles - 
- *
- * @group menubar
- */
-
-/**
- *
- *
- * @param {string} $primary-stylename (v-nativebutton) - 
- *
- * @group nativebutton
- */
-
-/**
- *
- *
- * @param {string} $primary-stylename (v-select) - 
- *
- * @group nativeselect
- */
-
-/**
- *
- * @group notification
- */
-
-/**
- *
- *
- * @param {string} $primary-stylename (v-select-optiongroup) - 
- * @param {bool} $include-additional-styles - 
- *
- * @group optiongroup
- */
-
-/**
- *
- *
- *
- * @group orderedlayout
- */
-
-/**
- *
- * @group panel
- */
-
-@-webkit-keyframes v-popupview-animate-in {
-		0% {
-		-webkit-transform: scale(0);
-	}
-	}
-
-@-moz-keyframes v-popupview-animate-in {
-		0% {
-		-moz-transform: scale(0);
-	}
-	}
-
-@keyframes v-popupview-animate-in {
-		0% {
-		-webkit-transform: scale(0);
-		-moz-transform: scale(0);
-		-ms-transform: scale(0);
-		-o-transform: scale(0);
-		transform: scale(0);
-	}
-	}
-
-/**
- *
- * @group progressbar
- */
-
-/**
- *
- * @group richtextarea
- */
-
-/**
- *
- * @group slider
- */
-
-/**
- *
- *
- * @param {string} $primary-stylename (v-splitpanel) - 
- * @param {bool} $include-additional-styles - 
- *
- * @group splitpanel
- */
-
-/**
- *
- * @group table
- */
-
-/**
- * Should the tabsheet content changes be animated.
- * 
- * @group tabsheet
- */
-
-/**
- * The background color for text fields.
- * @group textfield
- */
-
-/**
- * Outputs the selectors and properties for the TextArea component.
- *
- * @param {string} $primary-stylename (v-textarea) - the primary style name for the selectors
- * @param {bool} $include-additional-styles - should the mixin output all the different style variations of the component
- *
- * @group textarea
- */
-
-/**
- *
- * @group tree
- */
-
-/**
- *
- *
- * @param {string} $primary-stylename (v-treetable) - 
- *
- * @group treetable
- */
-
-/**
- *
- *
- * @param {string} $primary-stylename (v-select-twincol) - 
- *
- * @group twin-column-select
- */
-
-/**
- *
- *
- * @param {string} $primary-stylename (v-upload) -
- *
- * @group upload
- */
-
-/**
- *
- */
-
-/**
- * @group window
- */
-
-@-webkit-keyframes valo-modal-window-indication {
-		0% {
-		opacity: 0;
-	}
-		100% {
-		opacity: 1;
-	}
-	}
-
-@-moz-keyframes valo-modal-window-indication {
-		0% {
-		opacity: 0;
-	}
-		100% {
-		opacity: 1;
-	}
-	}
-
-@keyframes valo-modal-window-indication {
-		0% {
-		opacity: 0;
-	}
-		100% {
-		opacity: 1;
-	}
-	}
-
-@-webkit-keyframes valo-animate-out-scale-down-fade {
-		100% {
-		-webkit-transform: scale(0.8);
-		opacity: 0;
-	}
-	}
-
-@-moz-keyframes valo-animate-out-scale-down-fade {
-		100% {
-		-moz-transform: scale(0.8);
-		opacity: 0;
-	}
-	}
-
-@keyframes valo-animate-out-scale-down-fade {
-		100% {
-		-webkit-transform: scale(0.8);
-		-moz-transform: scale(0.8);
-		-ms-transform: scale(0.8);
-		-o-transform: scale(0.8);
-		transform: scale(0.8);
-		opacity: 0;
-	}
-	}
-
-/**
- * @group valo-menu
- */
-
 .valo-blueprint.v-app, .valo-blueprint.v-app-loading {
 	font: 300 18px/1.55 sans-serif;
 	color: #c1d3e9;
@@ -13484,4 +12780,1825 @@ div.v-layout.v-horizontal.v-widget {
 	display: inline-block;
 	width: 21px;
 	overflow: hidden;
+}
+
+.valo-blueprint #themeSelect {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	right: 0;
+	padding: 0 10px;
+	background-color: #1755a1;
+	background-color: rgba(23, 85, 161, 0.9);
+	color: #c1d3e9;
+	border-radius: 0 0 0 4px;
+}
+
+.valo-blueprint #themeSelect:before {
+	content: "Theme:";
+}
+
+.valo-blueprint #themeSelect select {
+	background: transparent;
+	color: inherit;
+	border: none;
+	display: inline-block;
+}
+
+.valo-blueprint .v-ui[width-range~="0-800px"] #themeSelect {
+	top: 41px;
+}
+
+.valo-blueprint .v-textfield-color1 {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	margin: 0;
+	font: inherit;
+	
+	font-weight: 400;
+	line-height: normal;
+	height: 41px;
+	border-radius: 4px;
+	padding: 5px 9px;
+	border: 1px solid #81a8d7;
+	background: #5c5f66;
+	color: #d1d2d4;
+	
+	
+	-webkit-transition: box-shadow 180ms, border 180ms;
+	-moz-transition: box-shadow 180ms, border 180ms;
+	transition: box-shadow 180ms, border 180ms;
+}
+
+.v-ie8 .valo-blueprint .v-textfield-color1, .v-ie9 .valo-blueprint .v-textfield-color1 {
+	line-height: 41px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.valo-blueprint .v-textfield-color1.v-disabled {
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-textfield-color1:focus {
+	outline: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.valo-blueprint .v-textfield-color1[class*="prompt"] {
+	color: #9397a0;
+}
+
+.valo-blueprint .v-textfield-color2 {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	margin: 0;
+	font: inherit;
+	
+	font-weight: 400;
+	line-height: normal;
+	height: 41px;
+	border-radius: 4px;
+	padding: 5px 9px;
+	border: 1px solid #81a8d7;
+	background: #3dbc1a;
+	color: #caeac1;
+	
+	
+	-webkit-transition: box-shadow 180ms, border 180ms;
+	-moz-transition: box-shadow 180ms, border 180ms;
+	transition: box-shadow 180ms, border 180ms;
+}
+
+.v-ie8 .valo-blueprint .v-textfield-color2, .v-ie9 .valo-blueprint .v-textfield-color2 {
+	line-height: 41px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.valo-blueprint .v-textfield-color2.v-disabled {
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-textfield-color2:focus {
+	outline: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.valo-blueprint .v-textfield-color2[class*="prompt"] {
+	color: #91ef77;
+}
+
+.valo-blueprint .v-textfield-color3 {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	margin: 0;
+	font: inherit;
+	
+	font-weight: 400;
+	line-height: normal;
+	height: 41px;
+	border-radius: 4px;
+	padding: 5px 9px;
+	border: 1px solid #81a8d7;
+	background: #d2f4f3;
+	color: #275857;
+	
+	
+	-webkit-transition: box-shadow 180ms, border 180ms;
+	-moz-transition: box-shadow 180ms, border 180ms;
+	transition: box-shadow 180ms, border 180ms;
+}
+
+.v-ie8 .valo-blueprint .v-textfield-color3, .v-ie9 .valo-blueprint .v-textfield-color3 {
+	line-height: 41px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.valo-blueprint .v-textfield-color3.v-disabled {
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-textfield-color3:focus {
+	outline: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.valo-blueprint .v-textfield-color3[class*="prompt"] {
+	color: #6bb7b5;
+}
+
+.valo-blueprint .v-textarea-color1 {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	margin: 0;
+	font: inherit;
+	
+	font-weight: 400;
+	line-height: normal;
+	height: 41px;
+	border-radius: 4px;
+	padding: 7px;
+	border: 1px solid #81a8d7;
+	background: #5c5f66;
+	color: #d1d2d4;
+	
+	
+	-webkit-transition: box-shadow 180ms, border 180ms;
+	-moz-transition: box-shadow 180ms, border 180ms;
+	transition: box-shadow 180ms, border 180ms;
+	height: auto;
+	resize: none;
+	white-space: pre-wrap;
+}
+
+.v-ie8 .valo-blueprint .v-textarea-color1, .v-ie9 .valo-blueprint .v-textarea-color1 {
+	line-height: 41px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.valo-blueprint .v-textarea-color1.v-disabled {
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-textarea-color1:focus {
+	outline: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.valo-blueprint .v-textarea-color1[class*="prompt"] {
+	color: #9397a0;
+}
+
+.v-ie8 .valo-blueprint .v-textarea-color1, .v-ie9 .valo-blueprint .v-textarea-color1 {
+	line-height: inherit;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.valo-blueprint .v-textarea-color2 {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	margin: 0;
+	font: inherit;
+	
+	font-weight: 400;
+	line-height: normal;
+	height: 41px;
+	border-radius: 4px;
+	padding: 7px;
+	border: 1px solid #81a8d7;
+	background: #3dbc1a;
+	color: #caeac1;
+	
+	
+	-webkit-transition: box-shadow 180ms, border 180ms;
+	-moz-transition: box-shadow 180ms, border 180ms;
+	transition: box-shadow 180ms, border 180ms;
+	height: auto;
+	resize: none;
+	white-space: pre-wrap;
+}
+
+.v-ie8 .valo-blueprint .v-textarea-color2, .v-ie9 .valo-blueprint .v-textarea-color2 {
+	line-height: 41px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.valo-blueprint .v-textarea-color2.v-disabled {
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-textarea-color2:focus {
+	outline: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.valo-blueprint .v-textarea-color2[class*="prompt"] {
+	color: #91ef77;
+}
+
+.v-ie8 .valo-blueprint .v-textarea-color2, .v-ie9 .valo-blueprint .v-textarea-color2 {
+	line-height: inherit;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.valo-blueprint .v-textarea-color3 {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	margin: 0;
+	font: inherit;
+	
+	font-weight: 400;
+	line-height: normal;
+	height: 41px;
+	border-radius: 4px;
+	padding: 7px;
+	border: 1px solid #81a8d7;
+	background: #d2f4f3;
+	color: #275857;
+	
+	
+	-webkit-transition: box-shadow 180ms, border 180ms;
+	-moz-transition: box-shadow 180ms, border 180ms;
+	transition: box-shadow 180ms, border 180ms;
+	height: auto;
+	resize: none;
+	white-space: pre-wrap;
+}
+
+.v-ie8 .valo-blueprint .v-textarea-color3, .v-ie9 .valo-blueprint .v-textarea-color3 {
+	line-height: 41px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.valo-blueprint .v-textarea-color3.v-disabled {
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-textarea-color3:focus {
+	outline: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.valo-blueprint .v-textarea-color3[class*="prompt"] {
+	color: #6bb7b5;
+}
+
+.v-ie8 .valo-blueprint .v-textarea-color3, .v-ie9 .valo-blueprint .v-textarea-color3 {
+	line-height: inherit;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.valo-blueprint .v-datefield-color1 {
+	height: 41px;
+	border-radius: 4px;
+}
+
+.valo-blueprint .v-datefield-color1 [class*="textfield"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	margin: 0;
+	font: inherit;
+	
+	font-weight: 400;
+	line-height: normal;
+	height: 41px;
+	border-radius: 4px;
+	padding: 5px 9px;
+	border: 1px solid #81a8d7;
+	background: #5c5f66;
+	color: #d1d2d4;
+	
+	
+	-webkit-transition: box-shadow 180ms, border 180ms;
+	-moz-transition: box-shadow 180ms, border 180ms;
+	transition: box-shadow 180ms, border 180ms;
+	padding-left: 49.2px;
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+}
+
+.v-ie8 .valo-blueprint .v-datefield-color1 [class*="textfield"], .v-ie9 .valo-blueprint .v-datefield-color1 [class*="textfield"] {
+	line-height: 41px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.valo-blueprint .v-datefield-color1 [class*="textfield"].v-disabled {
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-datefield-color1 [class*="textfield"]:focus {
+	outline: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.valo-blueprint .v-datefield-color1 [class*="textfield"][class*="prompt"] {
+	color: #9397a0;
+}
+
+.valo-blueprint .v-datefield-color1[class*="prompt"] > [class*="textfield"] {
+	color: #9397a0;
+}
+
+.valo-blueprint .v-datefield-color1 [class*="button"] {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	cursor: pointer;
+	-webkit-appearance: none;
+	background: transparent;
+	padding: 0;
+	position: absolute;
+	z-index: 10;
+	width: 41px;
+	line-height: 39px;
+	text-align: center;
+	font: inherit;
+	outline: none;
+	margin: 0;
+	top: 1px;
+	bottom: 1px;
+	left: 1px;
+	border: none;
+	border-right: 1px solid #808388;
+	color: #96989d;
+	border-radius: 3px 0 0 3px;
+}
+
+.valo-blueprint .v-datefield-color1 [class*="button"]:hover {
+	color: #d1d2d4;
+}
+
+.valo-blueprint .v-datefield-color1 [class*="button"]:before {
+	font-family: ThemeIcons;
+	content: "\f073";
+	-webkit-transition: color 140ms;
+	-moz-transition: color 140ms;
+	transition: color 140ms;
+}
+
+.valo-blueprint .v-datefield-color1 [class*="button"]:active:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(44, 47, 53, 0.2);
+	border-radius: inherit;
+}
+
+.valo-blueprint .v-datefield-color1.v-disabled {
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-datefield-color1.v-disabled [class*="button"] {
+	cursor: default;
+	pointer-events: none;
+}
+
+.valo-blueprint .v-datefield-color1.v-disabled [class*="button"]:active:after {
+	display: none;
+}
+
+.valo-blueprint .v-datefield-color1.v-readonly [class*="textfield"] {
+	background: #195cae;
+	color: #bed1e8;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.valo-blueprint .v-datefield-color1.v-readonly [class*="textfield"]:focus {
+	box-shadow: none;
+	border-color: #80a5d2;
+}
+
+.valo-blueprint .v-datefield-color1.v-readonly [class*="button"] {
+	cursor: default;
+	pointer-events: none;
+}
+
+.valo-blueprint .v-datefield-color1.v-readonly [class*="button"]:active:after {
+	display: none;
+}
+
+.valo-blueprint .v-datefield-color2 {
+	height: 41px;
+	border-radius: 4px;
+}
+
+.valo-blueprint .v-datefield-color2 [class*="textfield"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	margin: 0;
+	font: inherit;
+	
+	font-weight: 400;
+	line-height: normal;
+	height: 41px;
+	border-radius: 4px;
+	padding: 5px 9px;
+	border: 1px solid #81a8d7;
+	background: #3dbc1a;
+	color: #caeac1;
+	
+	
+	-webkit-transition: box-shadow 180ms, border 180ms;
+	-moz-transition: box-shadow 180ms, border 180ms;
+	transition: box-shadow 180ms, border 180ms;
+	padding-left: 49.2px;
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+}
+
+.v-ie8 .valo-blueprint .v-datefield-color2 [class*="textfield"], .v-ie9 .valo-blueprint .v-datefield-color2 [class*="textfield"] {
+	line-height: 41px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.valo-blueprint .v-datefield-color2 [class*="textfield"].v-disabled {
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-datefield-color2 [class*="textfield"]:focus {
+	outline: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.valo-blueprint .v-datefield-color2 [class*="textfield"][class*="prompt"] {
+	color: #91ef77;
+}
+
+.valo-blueprint .v-datefield-color2[class*="prompt"] > [class*="textfield"] {
+	color: #91ef77;
+}
+
+.valo-blueprint .v-datefield-color2 [class*="button"] {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	cursor: pointer;
+	-webkit-appearance: none;
+	background: transparent;
+	padding: 0;
+	position: absolute;
+	z-index: 10;
+	width: 41px;
+	line-height: 39px;
+	text-align: center;
+	font: inherit;
+	outline: none;
+	margin: 0;
+	top: 1px;
+	bottom: 1px;
+	left: 1px;
+	border: none;
+	border-right: 1px solid #68cb4d;
+	color: #83d36d;
+	border-radius: 3px 0 0 3px;
+}
+
+.valo-blueprint .v-datefield-color2 [class*="button"]:hover {
+	color: #caeac1;
+}
+
+.valo-blueprint .v-datefield-color2 [class*="button"]:before {
+	font-family: ThemeIcons;
+	content: "\f073";
+	-webkit-transition: color 140ms;
+	-moz-transition: color 140ms;
+	transition: color 140ms;
+}
+
+.valo-blueprint .v-datefield-color2 [class*="button"]:active:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(25, 104, 3, 0.2);
+	border-radius: inherit;
+}
+
+.valo-blueprint .v-datefield-color2.v-disabled {
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-datefield-color2.v-disabled [class*="button"] {
+	cursor: default;
+	pointer-events: none;
+}
+
+.valo-blueprint .v-datefield-color2.v-disabled [class*="button"]:active:after {
+	display: none;
+}
+
+.valo-blueprint .v-datefield-color2.v-readonly [class*="textfield"] {
+	background: #195cae;
+	color: #bed1e8;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.valo-blueprint .v-datefield-color2.v-readonly [class*="textfield"]:focus {
+	box-shadow: none;
+	border-color: #80a5d2;
+}
+
+.valo-blueprint .v-datefield-color2.v-readonly [class*="button"] {
+	cursor: default;
+	pointer-events: none;
+}
+
+.valo-blueprint .v-datefield-color2.v-readonly [class*="button"]:active:after {
+	display: none;
+}
+
+.valo-blueprint .v-datefield-color3 {
+	height: 41px;
+	border-radius: 4px;
+}
+
+.valo-blueprint .v-datefield-color3 [class*="textfield"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	margin: 0;
+	font: inherit;
+	
+	font-weight: 400;
+	line-height: normal;
+	height: 41px;
+	border-radius: 4px;
+	padding: 5px 9px;
+	border: 1px solid #81a8d7;
+	background: #d2f4f3;
+	color: #275857;
+	
+	
+	-webkit-transition: box-shadow 180ms, border 180ms;
+	-moz-transition: box-shadow 180ms, border 180ms;
+	transition: box-shadow 180ms, border 180ms;
+	padding-left: 49.2px;
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+}
+
+.v-ie8 .valo-blueprint .v-datefield-color3 [class*="textfield"], .v-ie9 .valo-blueprint .v-datefield-color3 [class*="textfield"] {
+	line-height: 41px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.valo-blueprint .v-datefield-color3 [class*="textfield"].v-disabled {
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-datefield-color3 [class*="textfield"]:focus {
+	outline: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.valo-blueprint .v-datefield-color3 [class*="textfield"][class*="prompt"] {
+	color: #6bb7b5;
+}
+
+.valo-blueprint .v-datefield-color3[class*="prompt"] > [class*="textfield"] {
+	color: #6bb7b5;
+}
+
+.valo-blueprint .v-datefield-color3 [class*="button"] {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	cursor: pointer;
+	-webkit-appearance: none;
+	background: transparent;
+	padding: 0;
+	position: absolute;
+	z-index: 10;
+	width: 41px;
+	line-height: 39px;
+	text-align: center;
+	font: inherit;
+	outline: none;
+	margin: 0;
+	top: 1px;
+	bottom: 1px;
+	left: 1px;
+	border: none;
+	border-right: 1px solid #dcf6f5;
+	color: #7ca6a5;
+	border-radius: 3px 0 0 3px;
+}
+
+.valo-blueprint .v-datefield-color3 [class*="button"]:hover {
+	color: #275857;
+}
+
+.valo-blueprint .v-datefield-color3 [class*="button"]:before {
+	font-family: ThemeIcons;
+	content: "\f073";
+	-webkit-transition: color 140ms;
+	-moz-transition: color 140ms;
+	transition: color 140ms;
+}
+
+.valo-blueprint .v-datefield-color3 [class*="button"]:active:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(18, 209, 204, 0.2);
+	border-radius: inherit;
+}
+
+.valo-blueprint .v-datefield-color3.v-disabled {
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-datefield-color3.v-disabled [class*="button"] {
+	cursor: default;
+	pointer-events: none;
+}
+
+.valo-blueprint .v-datefield-color3.v-disabled [class*="button"]:active:after {
+	display: none;
+}
+
+.valo-blueprint .v-datefield-color3.v-readonly [class*="textfield"] {
+	background: #195cae;
+	color: #bed1e8;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.valo-blueprint .v-datefield-color3.v-readonly [class*="textfield"]:focus {
+	box-shadow: none;
+	border-color: #80a5d2;
+}
+
+.valo-blueprint .v-datefield-color3.v-readonly [class*="button"] {
+	cursor: default;
+	pointer-events: none;
+}
+
+.valo-blueprint .v-datefield-color3.v-readonly [class*="button"]:active:after {
+	display: none;
+}
+
+.valo-blueprint .v-filterselect-color1 {
+	height: 41px;
+	border-radius: 4px;
+}
+
+.valo-blueprint .v-filterselect-color1 [class*="input"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	margin: 0;
+	font: inherit;
+	
+	font-weight: 400;
+	line-height: normal;
+	height: 41px;
+	border-radius: 4px;
+	padding: 5px 9px;
+	border: 1px solid #81a8d7;
+	background: #5c5f66;
+	color: #d1d2d4;
+	
+	
+	-webkit-transition: box-shadow 180ms, border 180ms;
+	-moz-transition: box-shadow 180ms, border 180ms;
+	transition: box-shadow 180ms, border 180ms;
+	width: 100% !important;
+	height: 100%;
+	padding-right: 42px;
+	border-radius: inherit;
+}
+
+.v-ie8 .valo-blueprint .v-filterselect-color1 [class*="input"], .v-ie9 .valo-blueprint .v-filterselect-color1 [class*="input"] {
+	line-height: 41px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.valo-blueprint .v-filterselect-color1 [class*="input"].v-disabled {
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-filterselect-color1 [class*="input"]:focus {
+	outline: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.valo-blueprint .v-filterselect-color1 [class*="input"][class*="prompt"] {
+	color: #9397a0;
+}
+
+.valo-blueprint .v-filterselect-color1 .v-icon + [class*="input"] {
+	padding-left: 41px;
+}
+
+.valo-blueprint .v-filterselect-color1 img.v-icon {
+	max-height: 41px;
+	margin-left: 9px;
+}
+
+.valo-blueprint .v-filterselect-color1 span.v-icon {
+	color: #d1d2d4;
+	width: 41px;
+	line-height: 1;
+	padding-top: 0.12em;
+}
+
+.valo-blueprint .v-filterselect-color1[class*="prompt"] > [class*="input"] {
+	color: #9397a0;
+}
+
+.valo-blueprint .v-filterselect-color1 [class$="button"] {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	cursor: pointer;
+	position: absolute;
+	width: 41px;
+	top: 1px;
+	right: 1px;
+	bottom: 1px;
+	border-left: 1px solid #808388;
+	color: #96989d;
+	border-radius: 0 3px 3px 0;
+}
+
+.v-ie8 .valo-blueprint .v-filterselect-color1 [class$="button"] {
+	background-color: #5c5f66;
+}
+
+.valo-blueprint .v-filterselect-color1 [class$="button"]:before {
+	font-family: ThemeIcons;
+	content: "\f078";
+	-webkit-transition: color 140ms;
+	-moz-transition: color 140ms;
+	transition: color 140ms;
+	position: absolute;
+	width: 41px;
+	text-align: center;
+	top: 50%;
+	line-height: 1;
+	margin-top: -0.47em;
+}
+
+.valo-blueprint .v-filterselect-color1 [class$="button"]:hover:before {
+	color: #d1d2d4;
+}
+
+.valo-blueprint .v-filterselect-color1 [class$="button"]:active:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border-radius: inherit;
+	background-color: rgba(44, 47, 53, 0.2);
+}
+
+.valo-blueprint .v-filterselect-color1.v-disabled {
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-filterselect-color1.v-disabled [class$="button"] {
+	cursor: default;
+	pointer-events: none;
+}
+
+.valo-blueprint .v-filterselect-color1.v-disabled [class$="button"]:active:after {
+	display: none;
+}
+
+.valo-blueprint .v-filterselect-color1.v-readonly [class*="input"] {
+	background: #195cae;
+	color: #bed1e8;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.valo-blueprint .v-filterselect-color1.v-readonly [class*="input"]:focus {
+	box-shadow: none;
+	border-color: #80a5d2;
+}
+
+.valo-blueprint .v-filterselect-color1.v-readonly [class$="button"] {
+	cursor: default;
+	pointer-events: none;
+}
+
+.valo-blueprint .v-filterselect-color1.v-readonly [class$="button"]:active:after {
+	display: none;
+}
+
+.valo-blueprint .v-filterselect-color2 {
+	height: 41px;
+	border-radius: 4px;
+}
+
+.valo-blueprint .v-filterselect-color2 [class*="input"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	margin: 0;
+	font: inherit;
+	
+	font-weight: 400;
+	line-height: normal;
+	height: 41px;
+	border-radius: 4px;
+	padding: 5px 9px;
+	border: 1px solid #81a8d7;
+	background: #3dbc1a;
+	color: #caeac1;
+	
+	
+	-webkit-transition: box-shadow 180ms, border 180ms;
+	-moz-transition: box-shadow 180ms, border 180ms;
+	transition: box-shadow 180ms, border 180ms;
+	width: 100% !important;
+	height: 100%;
+	padding-right: 42px;
+	border-radius: inherit;
+}
+
+.v-ie8 .valo-blueprint .v-filterselect-color2 [class*="input"], .v-ie9 .valo-blueprint .v-filterselect-color2 [class*="input"] {
+	line-height: 41px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.valo-blueprint .v-filterselect-color2 [class*="input"].v-disabled {
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-filterselect-color2 [class*="input"]:focus {
+	outline: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.valo-blueprint .v-filterselect-color2 [class*="input"][class*="prompt"] {
+	color: #91ef77;
+}
+
+.valo-blueprint .v-filterselect-color2 .v-icon + [class*="input"] {
+	padding-left: 41px;
+}
+
+.valo-blueprint .v-filterselect-color2 img.v-icon {
+	max-height: 41px;
+	margin-left: 9px;
+}
+
+.valo-blueprint .v-filterselect-color2 span.v-icon {
+	color: #caeac1;
+	width: 41px;
+	line-height: 1;
+	padding-top: 0.12em;
+}
+
+.valo-blueprint .v-filterselect-color2[class*="prompt"] > [class*="input"] {
+	color: #91ef77;
+}
+
+.valo-blueprint .v-filterselect-color2 [class$="button"] {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	cursor: pointer;
+	position: absolute;
+	width: 41px;
+	top: 1px;
+	right: 1px;
+	bottom: 1px;
+	border-left: 1px solid #68cb4d;
+	color: #83d36d;
+	border-radius: 0 3px 3px 0;
+}
+
+.v-ie8 .valo-blueprint .v-filterselect-color2 [class$="button"] {
+	background-color: #3dbc1a;
+}
+
+.valo-blueprint .v-filterselect-color2 [class$="button"]:before {
+	font-family: ThemeIcons;
+	content: "\f078";
+	-webkit-transition: color 140ms;
+	-moz-transition: color 140ms;
+	transition: color 140ms;
+	position: absolute;
+	width: 41px;
+	text-align: center;
+	top: 50%;
+	line-height: 1;
+	margin-top: -0.47em;
+}
+
+.valo-blueprint .v-filterselect-color2 [class$="button"]:hover:before {
+	color: #caeac1;
+}
+
+.valo-blueprint .v-filterselect-color2 [class$="button"]:active:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border-radius: inherit;
+	background-color: rgba(25, 104, 3, 0.2);
+}
+
+.valo-blueprint .v-filterselect-color2.v-disabled {
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-filterselect-color2.v-disabled [class$="button"] {
+	cursor: default;
+	pointer-events: none;
+}
+
+.valo-blueprint .v-filterselect-color2.v-disabled [class$="button"]:active:after {
+	display: none;
+}
+
+.valo-blueprint .v-filterselect-color2.v-readonly [class*="input"] {
+	background: #195cae;
+	color: #bed1e8;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.valo-blueprint .v-filterselect-color2.v-readonly [class*="input"]:focus {
+	box-shadow: none;
+	border-color: #80a5d2;
+}
+
+.valo-blueprint .v-filterselect-color2.v-readonly [class$="button"] {
+	cursor: default;
+	pointer-events: none;
+}
+
+.valo-blueprint .v-filterselect-color2.v-readonly [class$="button"]:active:after {
+	display: none;
+}
+
+.valo-blueprint .v-filterselect-color3 {
+	height: 41px;
+	border-radius: 4px;
+}
+
+.valo-blueprint .v-filterselect-color3 [class*="input"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	margin: 0;
+	font: inherit;
+	
+	font-weight: 400;
+	line-height: normal;
+	height: 41px;
+	border-radius: 4px;
+	padding: 5px 9px;
+	border: 1px solid #81a8d7;
+	background: #d2f4f3;
+	color: #275857;
+	
+	
+	-webkit-transition: box-shadow 180ms, border 180ms;
+	-moz-transition: box-shadow 180ms, border 180ms;
+	transition: box-shadow 180ms, border 180ms;
+	width: 100% !important;
+	height: 100%;
+	padding-right: 42px;
+	border-radius: inherit;
+}
+
+.v-ie8 .valo-blueprint .v-filterselect-color3 [class*="input"], .v-ie9 .valo-blueprint .v-filterselect-color3 [class*="input"] {
+	line-height: 41px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.valo-blueprint .v-filterselect-color3 [class*="input"].v-disabled {
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-filterselect-color3 [class*="input"]:focus {
+	outline: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.valo-blueprint .v-filterselect-color3 [class*="input"][class*="prompt"] {
+	color: #6bb7b5;
+}
+
+.valo-blueprint .v-filterselect-color3 .v-icon + [class*="input"] {
+	padding-left: 41px;
+}
+
+.valo-blueprint .v-filterselect-color3 img.v-icon {
+	max-height: 41px;
+	margin-left: 9px;
+}
+
+.valo-blueprint .v-filterselect-color3 span.v-icon {
+	color: #275857;
+	width: 41px;
+	line-height: 1;
+	padding-top: 0.12em;
+}
+
+.valo-blueprint .v-filterselect-color3[class*="prompt"] > [class*="input"] {
+	color: #6bb7b5;
+}
+
+.valo-blueprint .v-filterselect-color3 [class$="button"] {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	cursor: pointer;
+	position: absolute;
+	width: 41px;
+	top: 1px;
+	right: 1px;
+	bottom: 1px;
+	border-left: 1px solid #dcf6f5;
+	color: #7ca6a5;
+	border-radius: 0 3px 3px 0;
+}
+
+.v-ie8 .valo-blueprint .v-filterselect-color3 [class$="button"] {
+	background-color: #d2f4f3;
+}
+
+.valo-blueprint .v-filterselect-color3 [class$="button"]:before {
+	font-family: ThemeIcons;
+	content: "\f078";
+	-webkit-transition: color 140ms;
+	-moz-transition: color 140ms;
+	transition: color 140ms;
+	position: absolute;
+	width: 41px;
+	text-align: center;
+	top: 50%;
+	line-height: 1;
+	margin-top: -0.47em;
+}
+
+.valo-blueprint .v-filterselect-color3 [class$="button"]:hover:before {
+	color: #275857;
+}
+
+.valo-blueprint .v-filterselect-color3 [class$="button"]:active:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border-radius: inherit;
+	background-color: rgba(18, 209, 204, 0.2);
+}
+
+.valo-blueprint .v-filterselect-color3.v-disabled {
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-filterselect-color3.v-disabled [class$="button"] {
+	cursor: default;
+	pointer-events: none;
+}
+
+.valo-blueprint .v-filterselect-color3.v-disabled [class$="button"]:active:after {
+	display: none;
+}
+
+.valo-blueprint .v-filterselect-color3.v-readonly [class*="input"] {
+	background: #195cae;
+	color: #bed1e8;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.valo-blueprint .v-filterselect-color3.v-readonly [class*="input"]:focus {
+	box-shadow: none;
+	border-color: #80a5d2;
+}
+
+.valo-blueprint .v-filterselect-color3.v-readonly [class$="button"] {
+	cursor: default;
+	pointer-events: none;
+}
+
+.valo-blueprint .v-filterselect-color3.v-readonly [class$="button"]:active:after {
+	display: none;
+}
+
+.valo-blueprint .v-checkbox-color1 {
+	position: relative;
+	line-height: 21px;
+	white-space: nowrap;
+}
+
+.valo-blueprint .v-checkbox-color1.v-has-width label {
+	white-space: normal;
+}
+
+:root .valo-blueprint .v-checkbox-color1 {
+	padding-left: 27px;
+}
+
+:root .valo-blueprint .v-checkbox-color1 label {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	cursor: pointer;
+	display: inline-block;
+}
+
+:root .valo-blueprint .v-checkbox-color1 > input {
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+	left: 0.2em;
+	top: 0.2em;
+	z-index: 0;
+	margin: 0;
+}
+
+:root .valo-blueprint .v-checkbox-color1 > input:focus ~ label:before {
+	border: 1px solid #a5a7aa;
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+:root .valo-blueprint .v-checkbox-color1 > input ~ label:before, :root .valo-blueprint .v-checkbox-color1 > input ~ label:after {
+	content: "";
+	display: inline-block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 21px;
+	height: 21px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 4px;
+	font-size: 14px;
+	text-align: center;
+}
+
+:root .valo-blueprint .v-checkbox-color1 > input ~ label:before {
+	height: 20.5px;
+	padding: 0 10px;
+	color: #efeff0;
+	font-weight: 400;
+	
+	
+	border-radius: 4px;
+	border: 1px solid #81a8d7;
+	background: #5c5f66;
+	
+	
+	padding: 0;
+	height: 21px;
+}
+
+:root .valo-blueprint .v-checkbox-color1 > input ~ label:after {
+	content: "\f00c";
+	font-family: ThemeIcons;
+	color: transparent;
+	-webkit-transition: color 100ms;
+	-moz-transition: color 100ms;
+	transition: color 100ms;
+}
+
+:root .valo-blueprint .v-checkbox-color1 > input:active ~ label:after {
+	background-color: rgba(44, 47, 53, 0.2);
+}
+
+:root .valo-blueprint .v-checkbox-color1 > input:checked ~ label:after {
+	color: white;
+}
+
+.valo-blueprint .v-checkbox-color1 > .v-icon, .valo-blueprint .v-checkbox-color1 > label .v-icon {
+	margin: 0 7px 0 3px;
+	min-width: 1em;
+	cursor: pointer;
+}
+
+.valo-blueprint .v-checkbox-color1.v-disabled  > label, .valo-blueprint .v-checkbox-color1.v-disabled  > .v-icon {
+	cursor: default;
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-checkbox-color1.v-disabled  > label > .v-icon {
+	cursor: default;
+}
+
+:root .valo-blueprint .v-checkbox-color1.v-disabled > input:active ~ label:after {
+	background: transparent;
+}
+
+.valo-blueprint .v-checkbox-color1.v-readonly  > label, .valo-blueprint .v-checkbox-color1.v-readonly  > .v-icon {
+	cursor: default;
+}
+
+.valo-blueprint .v-checkbox-color1.v-readonly  > label > .v-icon {
+	cursor: default;
+}
+
+:root .valo-blueprint .v-checkbox-color1.v-readonly > input:active ~ label:after {
+	background: transparent;
+}
+
+:root .valo-blueprint .v-checkbox-color1.v-readonly > input ~ label:after {
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-checkbox-color2 {
+	position: relative;
+	line-height: 21px;
+	white-space: nowrap;
+}
+
+.valo-blueprint .v-checkbox-color2.v-has-width label {
+	white-space: normal;
+}
+
+:root .valo-blueprint .v-checkbox-color2 {
+	padding-left: 27px;
+}
+
+:root .valo-blueprint .v-checkbox-color2 label {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	cursor: pointer;
+	display: inline-block;
+}
+
+:root .valo-blueprint .v-checkbox-color2 > input {
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+	left: 0.2em;
+	top: 0.2em;
+	z-index: 0;
+	margin: 0;
+}
+
+:root .valo-blueprint .v-checkbox-color2 > input:focus ~ label:before {
+	border: 1px solid #a5b2dc;
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+:root .valo-blueprint .v-checkbox-color2 > input ~ label:before, :root .valo-blueprint .v-checkbox-color2 > input ~ label:after {
+	content: "";
+	display: inline-block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 21px;
+	height: 21px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 4px;
+	font-size: 14px;
+	text-align: center;
+}
+
+:root .valo-blueprint .v-checkbox-color2 > input ~ label:before {
+	height: 20.5px;
+	padding: 0 10px;
+	color: #f1f2f6;
+	font-weight: 400;
+	
+	
+	border-radius: 4px;
+	border: 1px solid #81a8d7;
+	background: #5d73c0;
+	
+	
+	padding: 0;
+	height: 21px;
+}
+
+:root .valo-blueprint .v-checkbox-color2 > input ~ label:after {
+	content: "\f00c";
+	font-family: ThemeIcons;
+	color: transparent;
+	-webkit-transition: color 100ms;
+	-moz-transition: color 100ms;
+	transition: color 100ms;
+}
+
+:root .valo-blueprint .v-checkbox-color2 > input:active ~ label:after {
+	background-color: rgba(22, 44, 120, 0.2);
+}
+
+:root .valo-blueprint .v-checkbox-color2 > input:checked ~ label:after {
+	color: white;
+}
+
+.valo-blueprint .v-checkbox-color2 > .v-icon, .valo-blueprint .v-checkbox-color2 > label .v-icon {
+	margin: 0 7px 0 3px;
+	min-width: 1em;
+	cursor: pointer;
+}
+
+.valo-blueprint .v-checkbox-color2.v-disabled  > label, .valo-blueprint .v-checkbox-color2.v-disabled  > .v-icon {
+	cursor: default;
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-checkbox-color2.v-disabled  > label > .v-icon {
+	cursor: default;
+}
+
+:root .valo-blueprint .v-checkbox-color2.v-disabled > input:active ~ label:after {
+	background: transparent;
+}
+
+.valo-blueprint .v-checkbox-color2.v-readonly  > label, .valo-blueprint .v-checkbox-color2.v-readonly  > .v-icon {
+	cursor: default;
+}
+
+.valo-blueprint .v-checkbox-color2.v-readonly  > label > .v-icon {
+	cursor: default;
+}
+
+:root .valo-blueprint .v-checkbox-color2.v-readonly > input:active ~ label:after {
+	background: transparent;
+}
+
+:root .valo-blueprint .v-checkbox-color2.v-readonly > input ~ label:after {
+	opacity: 0.5;
+	filter: alpha(opacity=50) ;
+}
+
+.valo-blueprint .v-slider-color1 .v-slider-handle:before {
+	color: #efeff0;
+	font-weight: 400;
+	
+	
+	
+	border: 1px solid #81a8d7;
+	background: #5c5f66;
+	
+	
+}
+
+.valo-blueprint .v-slider-color1 .v-slider-handle:before:after {
+	border: inherit;
+	top: -1px;
+	right: -1px;
+	bottom: -1px;
+	left: -1px;
+}
+
+.valo-blueprint .v-slider-color1 .v-slider-handle:before:hover:after {
+	background-color: rgba(129, 133, 141, 0.1);
+}
+
+.valo-blueprint .v-slider-color1 .v-slider-handle:before:focus:after {
+	border: inherit;
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.valo-blueprint .v-slider-color1 .v-slider-handle:before:active:after {
+	background-color: rgba(44, 47, 53, 0.2);
+}
+
+.valo-blueprint .v-slider-color1 .v-slider-handle:after {
+	border: 1px solid #a5a7aa;
+	border: 1px solid #a5a7aa;
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.valo-blueprint .v-slider-color2 .v-slider-base {
+	border-radius: 4px;
+	height: 10px;
+	background: #3a9520;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 6px;
+}
+
+.valo-blueprint .v-slider-color2.v-slider-vertical .v-slider-base {
+	background: #3a9520;
+}
+
+.valo-blueprint .v-slider-color3 .v-slider-base:before {
+	border-color: #81a8d7;
+}
+
+.valo-blueprint .v-slider-color3 .v-slider-base:after {
+	border-radius: 4px;
+	height: inherit;
+	background: #dcdc1e;
+	
+	
+	border: 1px solid #81a8d7;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 100%;
+}
+
+.valo-blueprint .v-slider-color3.v-slider-vertical .v-slider-base:after {
+	background: #dcdc1e;
+}
+
+.valo-blueprint .v-panel-caption-color1 {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 14px;
+	line-height: 40px;
+	border-bottom: 1px solid #6292cd;
+	background-color: #5c5f66;
+	background-image: -webkit-linear-gradient(top, #5c5f66 0%, #5c5f66 100%);
+	background-image: linear-gradient(to bottom,#5c5f66 0%, #5c5f66 100%);
+	color: #d1d2d4;
+	font-weight: 400;
+	font-size: 16px;
+	
+	
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.valo-blueprint .v-panel-caption-color2 {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 14px;
+	line-height: 40px;
+	border-bottom: 1px solid #6292cd;
+	background-color: #3dbc1a;
+	background-image: -webkit-linear-gradient(top, #3dbc1a 0%, #3dbc1a 100%);
+	background-image: linear-gradient(to bottom,#3dbc1a 0%, #3dbc1a 100%);
+	color: #caeac1;
+	font-weight: 400;
+	font-size: 16px;
+	
+	
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.valo-blueprint .v-panel-caption-color3 {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 14px;
+	line-height: 40px;
+	border-bottom: 1px solid #6292cd;
+	background-color: #fe902a;
+	background-image: -webkit-linear-gradient(top, #fe902a 0%, #fe902a 100%);
+	background-image: linear-gradient(to bottom,#fe902a 0%, #fe902a 100%);
+	color: #f4e0ce;
+	font-weight: 400;
+	font-size: 16px;
+	
+	
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.valo-blueprint .v-splitpanel-vertical, .valo-blueprint .v-splitpanel-horizontal {
+	outline: 1px dotted rgba(128, 128, 128, 0.2);
+}
+
+.valo-blueprint .v-slider-ticks:before {
+	content: "";
+	height: 15%;
+	position: absolute;
+	background-color: transparent;
+	background-image: -webkit-linear-gradient(left, #6292cd 1px, transparent 1px);
+	background-image: linear-gradient(to right,#6292cd 1px, transparent 1px);
+	background-repeat: repeat-x;
+	background-size: 24.9% 100%;
+	left: 12px;
+	right: 12px;
+}
+
+.valo-blueprint .v-slider-ticks.v-slider-vertical:before {
+	height: auto;
+	width: 15%;
+	background-color: transparent;
+	background-image: -webkit-linear-gradient(top, #6292cd 1px, transparent 1px);
+	background-image: linear-gradient(to bottom,#6292cd 1px, transparent 1px);
+	background-repeat: repeat-y;
+	background-size: 100% 24.99%;
+	right: auto;
+	left: 0;
+	top: 12px;
+	bottom: 12px;
+}
+
+.valo-blueprint .v-accordion-item-color1 .v-accordion-item-caption {
+	border-radius: inherit;
+}
+
+.valo-blueprint .v-accordion-item-color1 .v-accordion-item-caption  > .v-caption {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 14px;
+	line-height: 40px;
+	border-bottom: 1px solid #6292cd;
+	background-color: #5d73c0;
+	background-image: -webkit-linear-gradient(top, #5d73c0 0%, #5d73c0 100%);
+	background-image: linear-gradient(to bottom,#5d73c0 0%, #5d73c0 100%);
+	color: #d7dbe8;
+	font-weight: 400;
+	font-size: 16px;
+	
+	
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
+	display: block;
+	border-bottom-color: #81a8d7;
+	border-radius: inherit;
+	cursor: pointer;
+	position: relative;
+}
+
+.valo-blueprint .v-accordion-item-color1 .v-accordion-item-caption  > .v-caption:hover:before, .valo-blueprint .v-accordion-item-color1 .v-accordion-item-caption  > .v-caption:active:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border-radius: inherit;
+}
+
+.valo-blueprint .v-accordion-item-color1 .v-accordion-item-caption  > .v-caption:hover:before {
+	background-color: rgba(58, 135, 227, 0.1);
+	border: none;
+}
+
+.valo-blueprint .v-accordion-item-color1 .v-accordion-item-caption  > .v-caption:active:before {
+	background-color: rgba(3, 48, 101, 0.2);
+}
+
+.valo-blueprint .v-menubar-color1 {
+	color: #1a1a1a;
+	font-weight: 400;
+	
+	cursor: default;
+	border-radius: 4px;
+	border: 1px solid #81a8d7;
+	background: #fff;
+	
+	
+	padding: 0;
+	text-align: left;
+}
+
+.valo-blueprint .v-menubar-color1:after {
+	border: inherit;
+	top: -1px;
+	right: -1px;
+	bottom: -1px;
+	left: -1px;
+}
+
+.valo-blueprint .v-menubar-color1:focus:after {
+	border: inherit;
+	-webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
 }

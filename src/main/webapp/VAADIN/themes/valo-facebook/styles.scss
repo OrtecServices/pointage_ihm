@@ -1,7 +1,6 @@
 @import "variables";
+@import "../valo-ortec/valortec";
 
-@import "../valo/valo";
-
-.facebook {
-  @include valo;
+.valo-facebook {
+  @include valortec;
 }

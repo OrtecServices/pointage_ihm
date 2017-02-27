@@ -30,7 +30,7 @@ public class MenuLayout extends HorizontalLayout{
 
     }
 
-    public ComponentContainer getComponentContainer(){
+    public ComponentContainer getContentContainer(){
         return contentArea;
     }
 

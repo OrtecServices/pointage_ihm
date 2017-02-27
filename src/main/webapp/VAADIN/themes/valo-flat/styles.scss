@@ -1,6 +1,6 @@
 @import "variables";
-@import "../valo/valo";
+@import "../valo-ortec/valortec";
 
 .valo-flat {
-  @include valo;
+  @include valortec;
 }
