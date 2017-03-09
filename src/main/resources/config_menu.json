@@ -1,0 +1,80 @@
+{
+  "menuitems" : [
+    {
+      "label" : "Accueil",
+      "viewClass" :"Accueil.class",
+      "header" : false
+    },
+    {
+      "label" : "Projet",
+      "view" : null,
+      "header" : true
+    },
+    {
+      "label" : "Recherche",
+      "view" : "Recherche.class",
+      "header" : false
+    },
+    {
+      "label" : " Mes projets",
+      "view" : "Mesprojets.class",
+      "header" : false
+    },
+    {
+      "label" : "Nouveau Projet",
+      "view" : "NewProject.class",
+      "header" : false
+    },
+    {
+      "label" : "PPM",
+      "view" : null,
+      "header" : true
+    },
+    {
+      "label" : "Portefeuille",
+      "view" : "Portefeuille.class",
+      "header" : false
+    },
+    {
+      "label" : "Plan de charge",
+      "view" : "PlanCharge.class",
+      "header" : false
+    },
+    {
+      "label" : "Imputations",
+      "view" : null,
+      "header" : true
+    },
+    {
+      "label" : "Saisie",
+      "view" : "Saisie.class",
+      "header" : false
+    },
+    {
+      "label" : "Validation",
+      "view" : "Validation.class",
+      "header" : false
+    },
+    {
+      "label" : "Paramétrage",
+      "view" : null,
+      "header" : true
+    },
+    {
+      "label" : "Programme",
+      "view" : "Programme.class",
+      "header" : false
+    },
+    {
+      "label" : "Type de Projet",
+      "view" : "TypeProjet.class",
+      "header" : false
+    },
+    {
+      "label" : "Type de Document",
+      "view" : "TypeDocument.class",
+      "header" : true
+    }
+  ]
+
+}

@@ -1,5 +1,8 @@
 package fr.ortec.pointage.ui;
 
+import com.fasterxml.jackson.core.JsonGenerationException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.vaadin.annotations.PreserveOnRefresh;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Title;
@@ -18,7 +21,11 @@ import com.vaadin.ui.themes.ValoTheme;
 import fr.ortec.pointage.view.Accueil;
 import fr.ortec.pointage.view.TestIcon;
 import fr.ortec.pointage.view.TextFields;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map.Entry;
@@ -31,6 +38,8 @@ import java.util.Map.Entry;
 @Title("Pointage DSI")
 @PreserveOnRefresh
 public class PointageUI extends UI {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(PointageUI.class);
 
     private boolean testMode = false;
 
@@ -57,9 +66,12 @@ public class PointageUI extends UI {
     }
     private Navigator navigator;
     private LinkedHashMap<String, String> menuItems = new LinkedHashMap<>();
+    private Menu appMenu;
 
     @Override
     public void init(VaadinRequest request) {
+
+        final String basepath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
 
         if (request.getParameter("test") != null) {
             testMode = true;
@@ -86,6 +98,18 @@ public class PointageUI extends UI {
 
         navigator = new Navigator(this, viewDisplay);
         // Ajout des view : item du menu navigator.addView("libelle", Class.class);
+        ObjectMapper mapper = new ObjectMapper();
+
+        try {
+            appMenu = mapper.readValue(new File(basepath + "/WEB-INF/classes/config_menu.json"), Menu.class);
+        }catch(JsonGenerationException jge){
+            LOGGER.error(jge.getMessage());
+        }catch (JsonMappingException jme){
+            LOGGER.error(jme.getMessage());
+        }catch (IOException ioe){
+            LOGGER.error(ioe.getMessage());
+
+        }
 
         navigator.addView("accueil", Accueil.class);
         navigator.addView("textfields", TextFields.class);
