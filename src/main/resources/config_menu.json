@@ -1,79 +1,94 @@
 {
   "menuitems" : [
     {
+      "name" : "accueil",
       "label" : "Accueil",
-      "viewClass" :"Accueil.class",
+      "viewClass" :"fr.ortec.pointage.presentation.view.AccueilView",
       "header" : false
     },
     {
+      "name" : "projet",
       "label" : "Projet",
-      "view" : null,
+      "viewClass" : null,
       "header" : true
     },
     {
+      "name" : "recherche",
       "label" : "Recherche",
-      "view" : "Recherche.class",
+      "viewClass" : "RechercheView.class",
       "header" : false
     },
     {
+      "name" : "myProject",
       "label" : " Mes projets",
-      "view" : "Mesprojets.class",
+      "viewClass" : "Mesprojets.class",
       "header" : false
     },
     {
+      "name" : "newProject",
       "label" : "Nouveau Projet",
-      "view" : "NewProject.class",
+      "viewClass" : "NewProject.class",
       "header" : false
     },
     {
+      "name" : "ppm",
       "label" : "PPM",
-      "view" : null,
+      "viewClass" : null,
       "header" : true
     },
     {
+      "name" : "portofolio",
       "label" : "Portefeuille",
-      "view" : "Portefeuille.class",
+      "viewClass" : "Portefeuille.class",
       "header" : false
     },
     {
+      "name" : "capacity",
       "label" : "Plan de charge",
-      "view" : "PlanCharge.class",
+      "viewClass" : "PlanCharge.class",
       "header" : false
     },
     {
+      "name" : "timeSheet",
       "label" : "Imputations",
-      "view" : null,
+      "viewClass" : null,
       "header" : true
     },
     {
+      "name" : "input",
       "label" : "Saisie",
-      "view" : "Saisie.class",
+      "viewClass" : "Saisie.class",
       "header" : false
     },
     {
+      "name" : "checking",
       "label" : "Validation",
-      "view" : "Validation.class",
+      "viewClass" : "Validation.class",
       "header" : false
     },
     {
+      "name" : "parameter",
       "label" : "Paramétrage",
-      "view" : null,
+      "viewClass" : null,
       "header" : true
     },
     {
+      "name" : "program",
       "label" : "Programme",
-      "view" : "Programme.class",
+      "viewClass" : "Programme.class",
       "header" : false
     },
     {
+      "name" : "projectType",
       "label" : "Type de Projet",
-      "view" : "TypeProjet.class",
+      "viewClass" : "TypeProjet.class",
       "header" : false
     },
     {
+      "name" : "docType",
       "label" : "Type de Document",
-      "view" : "TypeDocument.class",
-      "header" : true
+      "viewClass" : "TypeDocument.class",
+      "header" : false
     }
   ]
 
