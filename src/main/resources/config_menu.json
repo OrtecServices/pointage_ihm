@@ -15,7 +15,7 @@
     {
       "name" : "recherche",
       "label" : "Recherche",
-      "viewClass" : "RechercheView.class",
+      "viewClass" : "fr.ortec.dsi.pointage.presentation.ihm.view.RechercheView",
       "header" : false
     },
     {

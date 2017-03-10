@@ -76,13 +76,14 @@ public class PointageUI extends UI {
 
         helpManager = new HelpManager(this);
         setLocale(Locale.FRANCE);
-
+        Responsive.makeResponsive(this);
         getPage().setTitle("Pointage DSI");
 
         setContent(loginRoot);
         loginRoot.setSizeFull();
 
         buildLoginView(false);
+
     }
 
     private void buildMainView(){
@@ -205,7 +206,13 @@ public class PointageUI extends UI {
                               settingsItem.addItem("Edit Profile", null);
         settingsItem.addItem("Preferences", null);
         settingsItem.addSeparator();
-        settingsItem.addItem("Sign Out", null);
+        settingsItem.addItem("Sign Out", new MenuBar.Command() {
+            @Override
+            public void menuSelected(MenuItem selectedItem) {
+                VaadinSession.getCurrent().close();
+                Page.getCurrent().reload();
+            }
+        });
         menu.addComponent(settings);
 
         menuItemsLayout.setPrimaryStyleName("valo-menuitems");
@@ -376,4 +383,6 @@ public class PointageUI extends UI {
         loginLayout.addComponent(loginPanel);
         loginLayout.setComponentAlignment(loginPanel, Alignment.MIDDLE_CENTER);
     }
+
+
 }
