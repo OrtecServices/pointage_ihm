@@ -342,7 +342,7 @@ public class PointageUI extends UI {
 
                 if (current_username != null && !"".equals(current_username) && current_password != null && !"".equals(current_password)){
                     try{
-                        // Authenticate collaborateur = collaborateurDao.getCollaborateurByLogin(username.getValue());
+                        // TODO Authenticate collaborateur = collaborateurDao.getCollaborateurByLogin(username.getValue());
                     }catch(Exception ex){
                         LOGGER.error("Error in DAO", ex);
                     }

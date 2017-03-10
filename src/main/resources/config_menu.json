@@ -3,7 +3,7 @@
     {
       "name" : "accueil",
       "label" : "Accueil",
-      "viewClass" :"fr.ortec.pointage.presentation.view.AccueilView",
+      "viewClass" :"fr.ortec.dsi.pointage.presentation.ihm.view.AccueilView",
       "header" : false
     },
     {
