@@ -309,6 +309,17 @@ public class PointageUI extends UI {
         labels.setComponentAlignment(image, Alignment.MIDDLE_CENTER);
         loginPanel.addComponent(labels);
 
+        HorizontalLayout titleH = new HorizontalLayout();
+        titleH.setWidth(100.0f, Unit.PERCENTAGE);
+        titleH.setMargin(true);
+
+        Label loginTitle = new Label("Pointage DSI");
+        loginTitle.addStyleName(ValoTheme.LABEL_H2);
+        loginTitle.addStyleName(ValoTheme.LABEL_COLORED);
+        titleH.addComponent(loginTitle);
+        titleH.setComponentAlignment(loginTitle, Alignment.MIDDLE_CENTER);
+        loginPanel.addComponent(titleH);
+
         HorizontalLayout userNameHL = new HorizontalLayout();
         userNameHL.setWidth(100.0f, Unit.PERCENTAGE);
         userNameHL.setMargin(true);
