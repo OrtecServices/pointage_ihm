@@ -4,35 +4,28 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.vaadin.annotations.PreserveOnRefresh;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Title;
-import com.vaadin.data.Property;
 import com.vaadin.event.ShortcutAction;
 import com.vaadin.event.ShortcutListener;
 import com.vaadin.navigator.Navigator;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.*;
-import com.vaadin.shared.ui.label.ContentMode;
+import com.vaadin.shared.ui.ContentMode;
 import com.vaadin.ui.*;
 import com.vaadin.ui.MenuBar.MenuItem;
 import com.vaadin.ui.themes.ValoTheme;
-import fr.ortec.dsi.pointage.presentation.ihm.ui.Menu;
 import fr.ortec.dsi.pointage.presentation.ihm.helper.HelpManager;
-import fr.ortec.dsi.pointage.presentation.ihm.ui.Menu;
-import fr.ortec.dsi.pointage.presentation.ihm.ui.MenuLayout;
 import fr.ortec.dsi.pointage.presentation.ihm.view.TestIcon;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.Locale;
+import java.util.*;
 import java.util.Map.Entry;
 
 /**
  * Created by jerome.millot on 23/02/2017.
- *
  */
 @Theme("valo-ortec")
 @Title("Pointage DSI")
@@ -40,36 +33,40 @@ import java.util.Map.Entry;
 public class PointageUI extends UI {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(PointageUI.class);
+    private static ArrayList<fr.ortec.dsi.pointage.presentation.ihm.bean.Theme> listThemes = new ArrayList<fr.ortec.dsi.pointage.presentation.ihm.bean.Theme>();
 
+    static {
+
+        listThemes.add(new fr.ortec.dsi.pointage.presentation.ihm.bean.Theme("valo-ortec", "Default"));
+        listThemes.add(new fr.ortec.dsi.pointage.presentation.ihm.bean.Theme("valo-blueprint", "Blueprint"));
+        listThemes.add(new fr.ortec.dsi.pointage.presentation.ihm.bean.Theme("valo-dark", "Dark"));
+        listThemes.add(new fr.ortec.dsi.pointage.presentation.ihm.bean.Theme("valo-facebook", "Facebook"));
+        listThemes.add(new fr.ortec.dsi.pointage.presentation.ihm.bean.Theme("valo-flat", "Flat"));
+        listThemes.add(new fr.ortec.dsi.pointage.presentation.ihm.bean.Theme("valo-flatdark", "Flatdark"));
+        listThemes.add(new fr.ortec.dsi.pointage.presentation.ihm.bean.Theme("valo-light", "Light"));
+        listThemes.add(new fr.ortec.dsi.pointage.presentation.ihm.bean.Theme("valo-metro", "Metro"));
+        listThemes.add(new fr.ortec.dsi.pointage.presentation.ihm.bean.Theme("valo-reindeer", "Reindeer"));
+
+    }
+
+    final private String basepath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
     private HelpManager helpManager;
 
-    private static LinkedHashMap<String, String> themeVariants = new LinkedHashMap<>();
-    static{
-        themeVariants.put("valo-ortec", "Default");
-        themeVariants.put("valo-blueprint", "Blueprint");
-        themeVariants.put("valo-dark", "Dark");
-        themeVariants.put("valo-facebook", "Facebook");
-        themeVariants.put("valo-flat", "Flat");
-        themeVariants.put("valo-flatdark", "Flatdark");
-        themeVariants.put("valo-light", "Light");
-        themeVariants.put("valo-metro", "Metro");
-        themeVariants.put("valo-reindeer", "Reindeer");
-    }
     private TestIcon testIcon = new TestIcon(100);
     private CssLayout loginRoot = new CssLayout();
     private MenuLayout root = new MenuLayout();
     private ComponentContainer viewDisplay = root.getContentContainer();
     private CssLayout menu = new CssLayout();
     private CssLayout menuItemsLayout = new CssLayout();
-    {
-        menu.setId("menu");
-    }
-
     private VerticalLayout loginLayout;
     private Navigator navigator;
     private LinkedHashMap<String, String> menuItems = new LinkedHashMap<>();
     private Menu appMenu;
-    final private String basepath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
+
+    {
+
+        menu.setId("menu");
+    }
 
     @Override
     public void init(VaadinRequest request) {
@@ -86,7 +83,7 @@ public class PointageUI extends UI {
 
     }
 
-    private void buildMainView(){
+    private void buildMainView() {
 
         if (browserCantRenderFontsConsistently()) {
             getPage().getStyles().add(".v-app.v-app.v-app {font-family: Sans-Serif;}");
@@ -103,7 +100,7 @@ public class PointageUI extends UI {
         ObjectMapper mapper = new ObjectMapper();
         try {
             appMenu = mapper.readValue(new File(basepath + "/WEB-INF/classes/config_menu.json"), Menu.class);
-        }catch(IOException ex){
+        } catch (IOException ex) {
             LOGGER.error(ex.getMessage());
         }
 
@@ -112,21 +109,21 @@ public class PointageUI extends UI {
         navigator = new Navigator(this, viewDisplay);
         // Ajout des view : item du menu navigator.addView("libelle", Class.class);
 
-        for(fr.ortec.dsi.pointage.presentation.ihm.ui.MenuItem menuItem : appMenu.getMenuitems()){
+        for (fr.ortec.dsi.pointage.presentation.ihm.ui.MenuItem menuItem : appMenu.getMenuitems()) {
             try {
-                if(menuItem.getViewClass() == null){
+                if (menuItem.getViewClass() == null) {
                     continue;
                 }
                 Class<? extends View> clazz = (Class<? extends View>) Class.forName(menuItem.getViewClass());
                 //Object obj = clazz.newInstance();
                 navigator.addView(menuItem.getName(), clazz);
-            }catch(ClassNotFoundException exception){
+            } catch (ClassNotFoundException exception) {
                 LOGGER.error(exception.getMessage());
             }
         }
 
         String f = Page.getCurrent().getUriFragment();
-        if(f == null || "".equals(f)){
+        if (f == null || "".equals(f)) {
             navigator.navigateTo("accueil");
         }
 
@@ -138,14 +135,14 @@ public class PointageUI extends UI {
 
             @Override
             public void afterViewChange(ViewChangeEvent viewChangeEvent) {
-                for(Iterator<Component> it = menuItemsLayout.iterator(); it.hasNext();){
+                for (Iterator<Component> it = menuItemsLayout.iterator(); it.hasNext(); ) {
                     it.next().removeStyleName("selected");
                 }
-                for(Entry<String, String> item : menuItems.entrySet()){
-                    if(viewChangeEvent.getViewName().equals(item.getKey())){
-                        for(Iterator<Component> it = menuItemsLayout.iterator(); it.hasNext();){
+                for (Entry<String, String> item : menuItems.entrySet()) {
+                    if (viewChangeEvent.getViewName().equals(item.getKey())) {
+                        for (Iterator<Component> it = menuItemsLayout.iterator(); it.hasNext(); ) {
                             Component c = it.next();
-                            if(c.getCaption() != null && c.getCaption().startsWith(item.getValue())){
+                            if (c.getCaption() != null && c.getCaption().startsWith(item.getValue())) {
                                 c.addStyleName("selected");
                                 break;
                             }
@@ -169,7 +166,7 @@ public class PointageUI extends UI {
                 .contains("PhantomJS");
     }
 
-    private Component buildMenu(){
+    private Component buildMenu() {
 
         HorizontalLayout top = new HorizontalLayout();
         top.setWidth("100%");
@@ -182,7 +179,7 @@ public class PointageUI extends UI {
         Button showMenu = new Button("Menu", new Button.ClickListener() {
             @Override
             public void buttonClick(Button.ClickEvent clickEvent) {
-                if(menu.getStyleName().contains("valo-menu-visible")){
+                if (menu.getStyleName().contains("valo-menu-visible")) {
                     menu.removeStyleName("valo-menu-visible");
                 } else {
                     menu.addStyleName("valo-menu-visible");
@@ -203,7 +200,7 @@ public class PointageUI extends UI {
         MenuBar settings = new MenuBar();
         settings.addStyleName("user-menu");
         MenuItem settingsItem = settings.addItem("Ton nom ici", new ThemeResource("../valo-ortec/img/profile-pic.png"), null);
-                              settingsItem.addItem("Edit Profile", null);
+        settingsItem.addItem("Edit Profile", null);
         settingsItem.addItem("Preferences", null);
         settingsItem.addSeparator();
         settingsItem.addItem("Sign Out", new MenuBar.Command() {
@@ -220,15 +217,15 @@ public class PointageUI extends UI {
 
         // add items
         Label label;
-        for(final fr.ortec.dsi.pointage.presentation.ihm.ui.MenuItem menuItem : appMenu.getMenuitems()){
+        for (final fr.ortec.dsi.pointage.presentation.ihm.ui.MenuItem menuItem : appMenu.getMenuitems()) {
 
-            if(menuItem.isHeader()) {
+            if (menuItem.isHeader()) {
                 label = new Label(menuItem.getLabel(), ContentMode.HTML);
                 label.setPrimaryStyleName(ValoTheme.MENU_SUBTITLE);
                 label.addStyleName(ValoTheme.LABEL_H4);
                 label.setSizeUndefined();
                 menuItemsLayout.addComponent(label);
-            }else {
+            } else {
                 menuItems.put(menuItem.getName(), menuItem.getLabel());
                 Button b = new Button(menuItem.getLabel(), new Button.ClickListener() {
                     @Override
@@ -245,42 +242,40 @@ public class PointageUI extends UI {
         return menu;
     }
 
-    private Component createThemeSelect(){
+    private Component createThemeSelect() {
         // Keep theme select the same size as in the current screenshots
         double width = 96;
         @SuppressWarnings("deprecation") WebBrowser browser = VaadinSession.getCurrent().getBrowser();
         // TODO : a revoir
-        if(browser.isChrome()){
+        if (browser.isChrome()) {
             width = 95;
-        } else if(browser.isIE()){
+        } else if (browser.isIE()) {
             width = 95.39;
-        } else if(browser.isFirefox()){
+        } else if (browser.isFirefox()) {
             width = 98;
         }
         getPage().getStyles().add("#themeSelect select {width: " + width + "px;}");
 
-        final NativeSelect  ns = new NativeSelect();
-        ns.setNullSelectionAllowed(false);
+        NativeSelect<fr.ortec.dsi.pointage.presentation.ihm.bean.Theme> ns = new NativeSelect<>("", listThemes);
         ns.setId("themeSelect");
-        ns.addContainerProperty("caption", String.class, "");
-        ns.setItemCaptionPropertyId("caption");
-        for(String identifier : themeVariants.keySet()){
-            ns.addItem(identifier).getItemProperty("caption").setValue(themeVariants.get(identifier));
-        }
-
-        ns.setValue("valo-ortec");
-        ns.addValueChangeListener(new Property.ValueChangeListener() {
+        ns.setItemCaptionGenerator(new ItemCaptionGenerator<fr.ortec.dsi.pointage.presentation.ihm.bean.Theme>() {
             @Override
-            public void valueChange(Property.ValueChangeEvent valueChangeEvent) {
-                setTheme((String) ns.getValue());
+            public String apply(fr.ortec.dsi.pointage.presentation.ihm.bean.Theme theme) {
+                return theme.getName();
             }
         });
+        ns.setEmptySelectionAllowed(false);
+        ns.setValue(listThemes.get(0));
+        ns.addValueChangeListener(event ->
+            setTheme(event.getValue().getValue())
+        );
+
         return ns;
     }
 
-    private void buildLoginView(boolean exit){
+    private void buildLoginView(boolean exit) {
 
-        if(exit){
+        if (exit) {
             // vide l'interface
             loginRoot.removeAllComponents();
         }
@@ -358,19 +353,19 @@ public class PointageUI extends UI {
                 String current_username = username.getValue();
                 String current_password = password.getValue();
 
-                if (current_username != null && !"".equals(current_username) && current_password != null && !"".equals(current_password)){
-                    try{
+                if (current_username != null && !"".equals(current_username) && current_password != null && !"".equals(current_password)) {
+                    try {
                         // TODO Authenticate collaborateur = collaborateurDao.getCollaborateurByLogin(username.getValue());
-                    }catch(Exception ex){
+                    } catch (Exception ex) {
                         LOGGER.error("Error in DAO", ex);
                     }
 
-                    if(!"".equals(current_username) && !"".equals(current_password)){
+                    if (!"".equals(current_username) && !"".equals(current_password)) {
                         signin.removeShortcutListener(enter);
                         getSession().setAttribute("username", current_username);
                         getSession().setAttribute("password", current_password);
                         buildMainView();
-                    }else{
+                    } else {
                         LOGGER.warn("Error dans la saisie des identifiants");
                     }
                 } else {
@@ -379,7 +374,8 @@ public class PointageUI extends UI {
                         loginPanel.removeComponent(loginPanel.getComponent(2));
                     }
                     // Add new error message
-                    Label error = new Label("Mauvais nom d'utilisateur ou mot de passe. <span>Hint: try empty values</span>", ContentMode.HTML);
+                    Label error = new Label("Mauvais nom d'utilisateur ou mot de passe. <span>Hint: try empty values</span>", ContentMode
+                            .HTML);
                     error.addStyleName("error");
                     error.setSizeUndefined();
                     // Add animation
